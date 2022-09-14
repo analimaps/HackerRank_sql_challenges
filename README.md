@@ -12,10 +12,4 @@ Hard | Advanced Join | [15 Days of Learning SQL](https://www.hackerrank.com/chal
 Medium | Advanced Select | [The PADS](https://www.hackerrank.com/challenges/the-pads/problem) | [My Solution](https://github.com/analimaps/HackerRank_sql_challenges/blob/main/03_The_pads.sql) |
 Medium | Advanced Join | [Placements](https://www.hackerrank.com/challenges/placements/problem) | [My Solution](https://github.com/analimaps/HackerRank_sql_challenges/blob/main/04_Placements.sql) |
 Medium | Basic Join | [The Report](https://www.hackerrank.com/challenges/the-report/problem) | [My Solution](https://github.com/analimaps/HackerRank_sql_challenges/blob/main/05_The_Report.sql) |
-
-
-
-
-
-
-
+Medium | Basic Join | [Challenges](https://www.hackerrank.com/challenges/challenges/problem) | [My Solution](https://github.com/analimaps/HackerRank_sql_challenges/blob/main/Challenges.sql) |
