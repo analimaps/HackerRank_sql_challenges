@@ -1,0 +1,55 @@
+--Author: Ana Paula Soares Lima 
+--LinkedIn: https://www.linkedin.com/in/anapaulasoareslima/
+
+/*Gathering Requirements
+For validation: The tables may contain duplicate records.
+
+Output fields: company_code, founder name, # lead managers, # senior managers, # managers, # of employees
+Order by company_code ASC
+*/
+
+----------------
+----------------
+
+--Solution
+WITH lead_manager_table as (
+        SELECT company_code,
+               count(distinct lead_manager_code) as qty_lead_managers
+        FROM lead_manager
+        GROUP BY company_code
+),
+    senior_manager_table as (
+        SELECT company_code,
+               count(distinct senior_manager_code) as qty_senior_managers
+        FROM senior_manager
+        GROUP BY company_code
+),
+    manager_table as (
+        SELECT company_code,
+               count(distinct manager_code) as qty_managers
+        FROM manager
+        GROUP BY company_code
+),
+    employee_table as (
+        SELECT company_code,
+               count(distinct employee_code) as qty_employees
+        FROM employee
+        GROUP BY company_code
+)
+SELECT 
+    c.company_code, 
+    c.founder, 
+    qty_lead_managers, 
+    qty_senior_managers,
+    qty_managers,
+    qty_employees
+FROM company as c
+INNER JOIN lead_manager_table as lm
+    ON c.company_code = lm.company_code
+INNER JOIN senior_manager_table as sm
+    ON c.company_code = sm.company_code
+INNER JOIN manager_table as m
+    ON c.company_code = m.company_code
+INNER JOIN employee_table as e
+    ON c.company_code = e.company_code
+ORDER BY company_code ASC
