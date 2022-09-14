@@ -16,6 +16,10 @@ ID | Difficulty | Subdomain | Challenge Link | Solution
 07 | Medium | Basic Join | [Top Competitors](https://www.hackerrank.com/challenges/full-score/problem) | [My Solution](https://github.com/analimaps/HackerRank_sql_challenges/blob/main/07_top_competitors.sql) |
 08 | Medium | Basic Join | [Ollivander's Inventory](https://www.hackerrank.com/challenges/harry-potter-and-wands/problem) | [My Solution](https://github.com/analimaps/HackerRank_sql_challenges/blob/main/08_Ollivanders_Inventory) |
 09 | Medium | Basic Join | [Contest Leaderboard](https://www.hackerrank.com/challenges/contest-leaderboard/problem) | [My Solution](https://github.com/analimaps/HackerRank_sql_challenges/blob/main/09_Contest_Leaderboard.sql) |
+10 | Medium | Advanced Select | [New Companies](https://www.hackerrank.com/challenges/the-company/problem) | [My Solution](https://github.com/analimaps/HackerRank_sql_challenges/blob/main/10_New_Companies) |
+
+
+
 
 
 
