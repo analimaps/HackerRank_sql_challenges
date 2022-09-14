@@ -1,0 +1,37 @@
+
+--Author: Ana Paula Soares Lima 
+--LinkedIn: https://www.linkedin.com/in/anapaulasoareslima/
+
+/*Gathering Requirements
+BRING the minimum number of coins needed to buy a wand of high power and age
+
+Output fields:  id, age, coins_needed, and power of the wands that Ron's interested in
+Order by power DESC, age DESC
+Filter: is_evil = 0
+*/
+
+----------------
+----------------
+
+--Solution
+WITH classification as (
+    SELECT
+        w.id,
+        wp.age,
+        w.coins_needed,
+        w.power,
+        MIN(w.coins_needed) OVER (PARTITION BY w.power, wp.age ORDER BY power DESC, age DESC, coins_needed ASC) as min_coin_needed
+    FROM wands                  as w
+    INNER JOIN wands_property   as wp
+        ON w.code = wp.code
+    WHERE is_evil = 0
+    GROUP BY w.id, wp.age, w.coins_needed, w.power
+    ORDER BY power DESC, age DESC, coins_needed ASC offset 0 rows
+)
+SELECT
+    id,
+    age,
+    coins_needed,
+    power
+FROM classification
+WHERE coins_needed = min_coin_needed
