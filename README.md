@@ -1,5 +1,5 @@
 # HackerRank_sql_challenges
-Solutions created by me to solve the HackerRank SQL challenges
+Those are solutions created by me to solve the HackerRank SQL challenges
 
 All the challeges of www.hackerrank.com were solved using the MS SQL Server. 
 
